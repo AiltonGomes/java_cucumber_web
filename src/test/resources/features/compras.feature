@@ -16,9 +16,10 @@ Funcionalidade: Comprar produtos infantis
     E pesquisar pelo <produto3>
     E adicionar ao carrinho a <qtd_3> indo para o pagamento
     #E valido os produtos <produto1>, <produto2>, <produto3> indo para o pagamento
-    E realizar o pagamento com <nome>, <CC>, <data>, <cvc>
+    E confirmo os produtos
+    E realizar o pagamento com <nome>, <cc>, <cvc>, <mes>, <ano>
     #Entao valido a minha compra
 
     Exemplos:
-      |			usuario			    |	senha  	  |     produto1     | qtd_1 |                  produto2                   | qtd_2 |      produto3     |qtd_3|       nome       |        CC        |   data  | cvc |
-      |	"teste.testando@teste.com"  | "123456789" | "Stylish Dress"  | "3"   |"Beautiful Peacock Blue Cotton Linen Saree"  | "2"   |  "Men Tshirt"     | "1" |"Teste T Testando"|"5461485388316873"|"11/2024"|"971"|
+      |			usuario			    |	senha  	  |     produto1     | qtd_1 |                  produto2                   | qtd_2 |      produto3     |qtd_3|       nome       |        cc        |   cvc  | mes  |  ano |
+      |	"teste.testando@teste.com"  | "123456789" | "Stylish Dress"  | "3"   |"Beautiful Peacock Blue Cotton Linen Saree"  | "2"   |  "Men Tshirt"     | "1" |"Teste T Testando"|"5461485388316873"|  "971" | "11" |"2024"|

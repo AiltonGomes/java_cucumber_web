@@ -9,8 +9,8 @@ public class CartSteps {
     public void valido_os_produtos_indo_para_o_pagamento(String prod1, String prod2, String prod3) throws InterruptedException {
 
     }
-    @E("realizar o pagamento com {string}, {string}, {string}, {string}")
-    public void realizar_o_pagamento_com(String nome, String CC, String data, String cvc) throws InterruptedException {
+    @E("confirmo os produtos")
+    public void confirmo_os_produtos() throws InterruptedException {
         CartPage cartpage = new CartPage();
         CommonPage commonpage = new CommonPage();
         commonpage.EsperaThread();
