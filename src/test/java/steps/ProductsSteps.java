@@ -1,6 +1,8 @@
 package steps;
 
 import io.cucumber.java.pt.E;
+import io.cucumber.java.pt.Quando;
+import page.CommonPage;
 import page.ProductPage;
 public class ProductsSteps {
     @E("selecionar a aba produtos")
@@ -9,16 +11,34 @@ public class ProductsSteps {
         produtopage.ProdutosClickMenu();
     }
     @E("pesquisar pelo {string}")
-    public void pesquisar_pelo(String produto) {
+    public void pesquisar_pelo(String produto) throws InterruptedException {
         ProductPage produtopage = new ProductPage();
+        CommonPage commonpage = new CommonPage();
+        produtopage.FechaPopupMouse();
+        commonpage.EsperaThread();
         produtopage.PesquisarProduto(produto);
+        produtopage.ClicarPesquisar();
     }
-    @E("realizar o pagamento com {string}, {string}, {string}, {string}")
-    public void realizar_o_pagamento_com(String string, String string2, String string3, String string4) {
-
+    @E("adicionar ao carrinho a {string}")
+    public void adicionar_ao_carrinho_a(String quantidade) throws InterruptedException {
+        ProductPage produtopage = new ProductPage();
+        CommonPage commonpage = new CommonPage();
+        commonpage.rolarTela();
+        produtopage.ClicarVerProduto();
+        produtopage.QtdProdutos(quantidade);
+        produtopage.ClicarAddCarrinho();
+        commonpage.EsperaThread();
+        produtopage.ClicarContinuarComprando();
     }
-    @E("valido a minha compra")
-    public void valido_a_minha_compra() {
-
+    @E("adicionar ao carrinho a {string} indo para o pagamento")
+    public void adicionar_ao_carrinho_a_indo_para_o_pagamento(String quantidade) throws InterruptedException {
+        ProductPage produtopage = new ProductPage();
+        CommonPage commonpage = new CommonPage();
+        commonpage.rolarTela();
+        produtopage.ClicarVerProduto();
+        produtopage.QtdProdutos(quantidade);
+        produtopage.ClicarAddCarrinho();
+        commonpage.EsperaThread();
+        produtopage.ClicarVerCarrinho();
     }
 }

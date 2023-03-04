@@ -2,6 +2,7 @@ package util;
 
 import io.cucumber.java.Scenario;
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
@@ -23,7 +24,7 @@ public class TestRule extends TestWatcher {
     @Before
     public void beforeScenario(Scenario scenario){}
 
-    @After
+    @AfterClass
     public void afterScenario(){
         if(driver != null){
             driver.close();
