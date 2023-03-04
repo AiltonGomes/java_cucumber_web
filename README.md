@@ -21,7 +21,6 @@ Observações:
 
 A respeito do site:
     
-    O site é muito instavel e tem muita propaganda, aparecendo algumas propagandas em momentos aleatorios.
-    Ao clicar em produtos sempre aparece uma para essa criei um metodo para fechar e dar continuidade no teste, porém essa propaganda aparece em locais e em momentos totalmente aleatorios, sendo impossivel mapear e criar algo que de 100% de acertivo, se caso fosse tratar teria que criar um if para cada interação.
+    O site é instavel e tem muita propaganda, aparecendo algumas propagandas em momentos aleatorios.
+    Ao clicar em produtos sempre aparece uma, para essa criei um metodo para fechar e dar continuidade no teste, porém essa propaganda aparece em locais e em momentos totalmente aleatorios, sendo impossivel mapear e criar algo que de 100% de acertivo, se caso fosse tratar teria que criar um if para cada interação.
     O ideal é que, quando o teste der erro, verificar nas evidencias e ver se foi uma dessas propagandas, se for infelizmente tera que rodar o teste novamente.
-    Tendo isso em vista
