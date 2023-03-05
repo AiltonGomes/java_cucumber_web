@@ -10,7 +10,7 @@ import util.TestRule;
 @CucumberOptions(
         //features = "classpath:src/test/resources/features",
         features = "src/test/resources/features",
-        tags = "@compra",
+        tags = "@registro",
         glue = {""}
 )
 public class RunTest {

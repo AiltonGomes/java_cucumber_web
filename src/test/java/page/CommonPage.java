@@ -36,6 +36,11 @@ public class CommonPage {
         WebElement Element = driver.findElement(By.xpath("//a[contains(@class,'btn btn-default check_out')]"));
         js.executeScript("arguments[0].scrollIntoView();", Element);
     }
+    public void rolarTela2(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement Element = driver.findElement(By.xpath("//button[@data-qa='create-account']"));
+        js.executeScript("arguments[0].scrollIntoView();", Element);
+    }
     public void EsperaThread() throws InterruptedException {
         long start = System.currentTimeMillis();
         Thread.sleep(1000);
