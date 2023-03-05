@@ -2,7 +2,6 @@ package util;
 
 import io.cucumber.java.Scenario;
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
@@ -21,10 +20,10 @@ public class TestRule extends TestWatcher {
     @Override
     protected void starting(Description description){}
 
-    @Before
-    public void beforeScenario(Scenario scenario){}
+    //@Before
+    //public void beforeScenario(Scenario scenario){}
 
-    @AfterClass
+    @After
     public void afterScenario(){
         if(driver != null){
             driver.close();

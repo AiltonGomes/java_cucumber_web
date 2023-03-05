@@ -2,82 +2,49 @@ package elements;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import page.CommonPage;
 
-public class RegisterElements {
-    @FindBy(xpath = "//b[contains(.,'Enter Account Information')]")
-    public WebElement txtauthentication;
-
+public class RegisterElements extends CommonPage {
+    @FindBy(xpath = "//a[contains(.,'Signup / Login')]")
+    protected WebElement linklogin;
+    @FindBy(xpath = "//input[@name='name']")
+    public WebElement txtnome;
+    @FindBy(xpath = "//input[@data-qa='signup-email']")
+    protected WebElement txtemail;
+    @FindBy(xpath = "//button[@type='submit'][contains(.,'Signup')]")
+    public WebElement btnsignup;
     @FindBy(id = "id_gender1")
-    public WebElement genderMale;
-
+    public WebElement radMale;
     @FindBy(id = "id_gender2")
     public WebElement genderFemale;
-
     @FindBy(id = "password")
-    public WebElement inppasswd;
-
+    public WebElement txtpassoword;
     @FindBy(id = "days")
     public WebElement dayBirth;
-
     @FindBy(id = "months")
     public WebElement monthBirth;
-
     @FindBy(id = "years")
     public WebElement yearBirth;
-
     @FindBy(id = "first_name")
-    public WebElement inpfirstName;
-
+    public WebElement txtfirstName;
     @FindBy(id = "last_name")
-    public WebElement inplastName;
-
-    @FindBy(id = "company")
-    public WebElement inpcompany;
-
+    public WebElement txtlasttName;
+    @FindBy(id = "last_name")
+    public WebElement company;
     @FindBy(id = "address1")
-    public WebElement address;
-
-    @FindBy(id = "address2")
-    public WebElement addressCont;
-
+    public WebElement txtaddress;
     @FindBy(id = "country")
     public WebElement country;
-
     @FindBy(id = "state")
-    public WebElement state;
-
+    public WebElement txtstate;
     @FindBy(id = "city")
-    public WebElement city;
-
+    public WebElement txtcity;
     @FindBy(id = "zipcode")
-    public WebElement postcode;
-
-
-
-
-
-
-
-    @FindBy(id = "optin")
-    public WebElement specialOffers;
-
-    @FindBy(id = "company")
-    public WebElement company;
-
+    public WebElement txtpostcode;
     @FindBy(id = "mobile_number")
-    public WebElement phone_mobile;
-
-    @FindBy(id = "create-account")
+    public WebElement txt_mobile;
+    @FindBy(xpath = "//button[contains(.,'Create Account')]")
     public WebElement btnRegister;
-/*
-    @FindBy(id = "other")
-    public WebElement additionalInformation;
-
-    @FindBy(id = "phone")
-    public WebElement phone_home;
-
-    @FindBy(id = "alias")
-    public WebElement addresAlias;
-*/
-
+    @FindBy(xpath = "//b[contains(.,'Account Created!')]")
+    public WebElement validacontacriada;
 }
