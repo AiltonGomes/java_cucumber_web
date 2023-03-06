@@ -40,7 +40,7 @@ public class ProductsSteps {
     public void adicionar_ao_carrinho_a_indo_para_o_pagamento(String quantidade) throws InterruptedException {
         ProductPage produtopage = new ProductPage();
         CommonPage commonpage = new CommonPage();
-        commonpage.rolarTelaProdutos();
+        commonpage.rolarTelaCheckout();
         produtopage.ClicarVerProduto();
         produtopage.QtdProdutos(quantidade);
         produtopage.ClicarAddCarrinho();

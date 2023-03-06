@@ -17,9 +17,9 @@ public class CommonPage {
         Actions action = new Actions(driver);
         action.moveToElement(element).build().perform();
     }
-    public void esperaExplicita(){
-        WebElement firstResult = new WebDriverWait(driver, Duration.ofSeconds(1))
-                .until(ExpectedConditions.elementToBeClickable(By.id("submit_search")));
+    public void esperaExplicita(String elemento){
+        WebElement firstResult = new WebDriverWait(driver, Duration.ofSeconds(5))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(elemento)));
         System.out.println(firstResult.getText());
     }
     public void rolarTelaProdutos(){

@@ -9,7 +9,7 @@ import util.TestRule;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        tags = "@compra",
+        tags = "@registro",
         glue = {""}
 )
 public class RunTest {
