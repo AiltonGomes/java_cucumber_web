@@ -1,6 +1,6 @@
 #language: pt
 #encoding: utf-8
-#@compra
+#@compras
 
 Funcionalidade: Comprar produtos infantis
 
