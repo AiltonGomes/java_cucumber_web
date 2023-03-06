@@ -13,9 +13,6 @@ import java.time.Duration;
 
 public class CommonPage {
     protected WebDriver driver = TestRule.getDriver();
-
-    public CommonPage(){}
-
     protected void moveToElement(WebElement element){
         Actions action = new Actions(driver);
         action.moveToElement(element).build().perform();
@@ -30,7 +27,6 @@ public class CommonPage {
         WebElement Element = driver.findElement(By.xpath("//a[contains(.,'View Product')]"));
         js.executeScript("arguments[0].scrollIntoView();", Element);
     }
-
     public void rolarTela1(){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement Element = driver.findElement(By.xpath("//a[contains(@class,'btn btn-default check_out')]"));
