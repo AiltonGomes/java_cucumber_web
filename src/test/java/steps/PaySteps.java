@@ -1,10 +1,12 @@
 package steps;
 
 import io.cucumber.java.pt.Então;
+import org.junit.Test;
 import page.CommonPage;
 import page.PayPage;
 
 public class PaySteps {
+    @Test
     @Então("realizar o pagamento com {string}, {string}, {string}, {string}, {string}")
     public void realizar_o_pagamento_com(String nome, String cc, String mes, String ano, String cvc) throws InterruptedException {
         PayPage paypage = new PayPage();

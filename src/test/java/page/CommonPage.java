@@ -13,32 +13,23 @@ import java.time.Duration;
 
 public class CommonPage {
     protected WebDriver driver = TestRule.getDriver();
-
-    public CommonPage(){}
-
     protected void moveToElement(WebElement element){
         Actions action = new Actions(driver);
         action.moveToElement(element).build().perform();
     }
-    public void esperaExplicita(){
-        WebElement firstResult = new WebDriverWait(driver, Duration.ofSeconds(1))
-                .until(ExpectedConditions.elementToBeClickable(By.id("submit_search")));
+    public void esperaExplicita(String elemento){
+        WebElement firstResult = new WebDriverWait(driver, Duration.ofSeconds(5))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(elemento)));
         System.out.println(firstResult.getText());
     }
-    public void rolarTela(){
+    public void rolarTelaProdutos(){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement Element = driver.findElement(By.xpath("//a[contains(.,'View Product')]"));
         js.executeScript("arguments[0].scrollIntoView();", Element);
     }
-
-    public void rolarTela1(){
+    public void rolarTelaCheckout(){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement Element = driver.findElement(By.xpath("//a[contains(@class,'btn btn-default check_out')]"));
-        js.executeScript("arguments[0].scrollIntoView();", Element);
-    }
-    public void rolarTela2(){
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        WebElement Element = driver.findElement(By.xpath("//button[@data-qa='create-account']"));
         js.executeScript("arguments[0].scrollIntoView();", Element);
     }
     public void EsperaThread() throws InterruptedException {
@@ -46,5 +37,4 @@ public class CommonPage {
         Thread.sleep(1000);
         System.out.println("Sleep time in ms = " + (System.currentTimeMillis() - start));
     }
-
 }
