@@ -107,10 +107,9 @@ public class RegisterStep {
     }
     @Test
     @E("selecionar para criar conta")
-    public void selecionar_para_criar_conta() throws InterruptedException {
+    public void selecionar_para_criar_conta() {
         RegisterPage registerpage = new RegisterPage();
-        CommonPage commonpage = new CommonPage();
-        commonpage.EsperaThread();
+        registerpage.rolarTelaRegister();
         registerpage.CriarUsuario();
     }
     @Test

@@ -1,22 +1,14 @@
 package page;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import util.TestRule;
-
 import java.time.Duration;
 
 public class CommonPage {
     protected WebDriver driver = TestRule.getDriver();
-    protected void moveToElement(WebElement element){
-        Actions action = new Actions(driver);
-        action.moveToElement(element).build().perform();
-    }
+
     public void esperaExplicita(String elemento){
         WebElement firstResult = new WebDriverWait(driver, Duration.ofSeconds(5))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath(elemento)));
@@ -31,6 +23,11 @@ public class CommonPage {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement Element = driver.findElement(By.xpath("//a[contains(@class,'btn btn-default check_out')]"));
         js.executeScript("arguments[0].scrollIntoView();", Element);
+    }
+    public void rolarTelaRegister(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement Element = driver.findElement(By.xpath("//button[contains(.,'Create Account')]"));
+        js.executeScript("//button[contains(.,'Create Account')]", Element);
     }
     public void EsperaThread() throws InterruptedException {
         long start = System.currentTimeMillis();

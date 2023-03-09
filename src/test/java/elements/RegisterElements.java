@@ -29,7 +29,7 @@ public class RegisterElements extends CommonPage {
     public WebElement txtfirstName;
     @FindBy(id = "last_name")
     public WebElement txtlasttName;
-    @FindBy(id = "last_name")
+    @FindBy(id = "company")
     public WebElement company;
     @FindBy(id = "address1")
     public WebElement txtaddress;
@@ -47,4 +47,6 @@ public class RegisterElements extends CommonPage {
     public WebElement btnRegister;
     @FindBy(xpath = "//b[contains(.,'Account Created!')]")
     public WebElement validacontacriada;
+    @FindBy(xpath = "//a[contains(@data-qa,'continue-button')]")
+    public WebElement btnContinue;
 }
