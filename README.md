@@ -1,13 +1,6 @@
 Projeto de automação WEB com Selenium WebDriver
 
 ######################## !!!!!!!!!!!!!! IMPORTANTE !!!!!!!!!!!!!! ########################   
-Observações:
-
-A respeito dos testes:
-
-Clonando o projeto para realizar testes:
-
-    git clone https://github.com/AiltonGomes/teste_dbc_web.git
 
 Navegador e chromedriver:
     
